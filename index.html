@@ -1,1 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>أبو العز | شركة الحلول الرقمية</title>
+
+    <meta name="description" content="أبو العز - حلول رقمية وتصميم مواقع وخدمات تقنية.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background: #0b0d12;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #20232c;
+            background: rgba(11, 13, 18, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #10a37f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #b8bcc7;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #10a37f;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at top, #18352f 0%, #0b0d12 45%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #245d4f;
+            border-radius: 30px;
+            color: #6ee7c5;
+            margin-bottom: 25px;
+            background: rgba(16, 163, 127, 0.08);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #10a37f;
+        }
+
+        .hero p {
+            color: #b8bcc7;
+            font-size: 20px;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 28px;
+            border-radius: 12px;
+            font-weight: bold;
+            border: 1px solid #30343e;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #10a37f;
+            color: white;
+            border-color: #10a37f;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #0d8f70;
+        }
+
+        .btn-secondary {
+            background: #171a21;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            border-color: #10a37f;
+        }
+
+        .section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #999faa;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #12151b;
+            border: 1px solid #252a34;
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #10a37f;
+        }
+
+        .card-icon {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .card p {
+            color: #9da2ae;
+            line-height: 1.8;
+        }
+
+        .cta {
+            margin: 30px 7% 90px;
+            padding: 60px 30px;
+            text-align: center;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #102c25, #11151d);
+            border: 1px solid #245d4f;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #aeb3be;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            border-top: 1px solid #20232c;
+            padding: 35px 7%;
+            text-align: center;
+            color: #858b98;
+        }
+
+        @media (max-width: 800px) {
+            .nav-links {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            أبو <span>العز</span>
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#about">عن الشركة</a></li>
+                <li><a href="#contact">تواصل</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🚀 شركة رقمية حديثة
+                </div>
+
+                <h1>
+                    نبني أفكارك<br>
+                    <span>بشكل رقمي</span>
+                </h1>
+
+                <p>
+                    حلول رقمية، مواقع، أنظمة وخدمات تقنية
+                    تساعد أصحاب المشاريع والشركات على بناء حضورهم
+                    الرقمي بطريقة حديثة.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#services" class="btn btn-primary">
+                        اكتشف خدماتنا
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        💬 تواصل مع أبو العز
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section" id="services">
+
+            <div class="section-title">
+
+                <h2>خدماتنا</h2>
+
+                <p>
+                    مجموعة من الخدمات الرقمية التي سنوسعها لاحقًا
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">💻</div>
+
+                    <h3>تصميم المواقع</h3>
+
+                    <p>
+                        تصميم مواقع حديثة ومتجاوبة تناسب الشركات
+                        والمشاريع والأعمال المختلفة.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🤖</div>
+
+                    <h3>حلول الذكاء الاصطناعي</h3>
+
+                    <p>
+                        تطوير أفكار وأدوات رقمية تعتمد على تقنيات
+                        الذكاء الاصطناعي.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">⚙️</div>
+
+                    <h3>الأنظمة الرقمية</h3>
+
+                    <p>
+                        بناء أنظمة ولوحات تحكم وإدارة للمشاريع
+                        والخدمات الرقمية.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section" id="about">
+
+            <div class="section-title">
+
+                <h2>عن أبو العز</h2>
+
+                <p>
+                    نعمل على بناء منصة رقمية متكاملة تجمع الخدمات
+                    والطلبات والدعم الفني في مكان واحد.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="cta" id="contact">
+
+            <h2>هل لديك فكرة؟</h2>
+
+            <p>
+                أرسل تفاصيل مشروعك وسنقوم ببناء النظام المناسب له.
+            </p>
+
+            <a
+                href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                تواصل مباشرة مع أبو العز
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 أبو العز — جميع الحقوق محفوظة
+
+    </footer>
+
+</body>
+</html>
