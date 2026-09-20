@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+    <title>لوحة إدارة أبو العز</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- ==============================
+         حماية أولية للوحة
+    =============================== -->
+
+    <div id="adminLoading" class="admin-loading">
+
+        <div class="admin-loading-box">
+
+            <div class="admin-spinner"></div>
+
+            <h2>
+                جاري التحقق...
+            </h2>
+
+            <p>
+                يتم التحقق من صلاحيات الدخول
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+         لوحة الإدارة
+    =============================== -->
+
+    <div id="adminApp"
+         class="admin-app"
+         hidden>
+
+
+        <!-- الشريط الجانبي -->
+
+        <aside class="admin-sidebar">
+
+            <div class="admin-brand">
+
+                <div class="admin-logo">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        أبو العز
+                    </strong>
+
+                    <span>
+                        لوحة الإدارة
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav class="admin-nav">
+
+                <a href="#dashboard"
+                   class="admin-nav-link active">
+
+                    🏠
+                    <span>
+                        الرئيسية
+                    </span>
+
+                </a>
+
+
+                <a href="#users"
+                   class="admin-nav-link">
+
+                    👥
+                    <span>
+                        المستخدمون
+                    </span>
+
+                </a>
+
+
+                <a href="#orders"
+                   class="admin-nav-link">
+
+                    📦
+                    <span>
+                        الطلبات
+                    </span>
+
+                </a>
+
+
+                <a href="#support"
+                   class="admin-nav-link">
+
+                    🎫
+                    <span>
+                        الدعم
+                    </span>
+
+                </a>
+
+
+                <a href="#reviews"
+                   class="admin-nav-link">
+
+                    ⭐
+                    <span>
+                        التقييمات
+                    </span>
+
+                </a>
+
+
+                <a href="#packages"
+                   class="admin-nav-link">
+
+                    💰
+                    <span>
+                        الباقات والأسعار
+                    </span>
+
+                </a>
+
+
+                <a href="#notifications"
+                   class="admin-nav-link">
+
+                    🔔
+                    <span>
+                        الإشعارات
+                    </span>
+
+                </a>
+
+
+                <a href="#activity"
+                   class="admin-nav-link">
+
+                    🛡️
+                    <span>
+                        سجل النشاط
+                    </span>
+
+                </a>
+
+
+                <a href="#settings"
+                   class="admin-nav-link">
+
+                    ⚙️
+                    <span>
+                        الإعدادات
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="index.html"
+                   class="admin-back">
+
+                    ← العودة للموقع
+
+                </a>
+
+
+                <button
+                    type="button"
+                    id="adminLogoutButton"
+                    class="admin-logout">
+
+                    🚪 تسجيل الخروج
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==============================
+             المحتوى
+        =============================== -->
+
+        <main class="admin-main">
+
+
+            <!-- الهيدر -->
+
+            <header class="admin-header">
+
+                <div>
+
+                    <span class="admin-header-label">
+                        لوحة التحكم
+                    </span>
+
+                    <h1 id="adminPageTitle">
+                        الرئيسية
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-header-actions">
+
+                    <button
+                        type="button"
+                        class="admin-icon-button"
+                        id="adminNotificationButton"
+                        title="الإشعارات">
+
+                        🔔
+
+                        <span
+                            id="adminNotificationCount"
+                            class="notification-count">
+
+                            0
+
+                        </span>
+
+                    </button>
+
+
+                    <div class="admin-user">
+
+                        <div class="admin-user-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong id="adminUserName">
+                                المدير
+                            </strong>
+
+                            <span id="adminUserEmail">
+                                جاري التحميل...
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==============================
+                 صفحة Dashboard
+            =============================== -->
+
+            <section
+                id="admin-dashboard"
+                class="admin-section active">
+
+
+                <div class="admin-welcome">
+
+                    <div>
+
+                        <span>
+                            مرحبًا بك 👋
+                        </span>
+
+                        <h2>
+                            مركز إدارة أبو العز
+                        </h2>
+
+                        <p>
+                            من هنا ستتمكن من إدارة
+                            المستخدمين والطلبات والدعم
+                            والمحتوى والإعدادات.
+                        </p>
+
+                    </div>
+
+                    <div class="admin-welcome-icon">
+                        🚀
+                    </div>
+
+                </div>
+
+
+                <!-- الإحصائيات -->
+
+                <div class="admin-stats">
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <span>
+                                المستخدمون
+                            </span>
+
+                            <strong id="statUsers">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            📦
+                        </div>
+
+                        <div>
+
+                            <span>
+                                الطلبات
+                            </span>
+
+                            <strong id="statOrders">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            🎫
+                        </div>
+
+                        <div>
+
+                            <span>
+                                تذاكر الدعم
+                            </span>
+
+                            <strong id="statSupport">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon">
+                            ⭐
+                        </div>
+
+                        <div>
+
+                            <span>
+                                التقييمات
+                            </span>
+
+                            <strong id="statReviews">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- الإجراءات السريعة -->
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                أدوات سريعة
+                            </span>
+
+                            <h3>
+                                ماذا تريد أن تفعل؟
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-admin-action="orders">
+
+                            <span>
+                                📦
+                            </span>
+
+                            <strong>
+                                مراجعة الطلبات
+                            </strong>
+
+                            <small>
+                                إدارة طلبات العملاء
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-admin-action="support">
+
+                            <span>
+                                🎫
+                            </span>
+
+                            <strong>
+                                الدعم
+                            </strong>
+
+                            <small>
+                                متابعة رسائل العملاء
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-admin-action="users">
+
+                            <span>
+                                👥
+                            </span>
+
+                            <strong>
+                                المستخدمون
+                            </strong>
+
+                            <small>
+                                إدارة الحسابات
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-admin-action="packages">
+
+                            <span>
+                                💰
+                            </span>
+
+                            <strong>
+                                الأسعار
+                            </strong>
+
+                            <small>
+                                إدارة الباقات
+                            </small>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- آخر الطلبات -->
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <span>
+                                النشاط
+                            </span>
+
+                            <h3>
+                                آخر الطلبات
+                            </h3>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="admin-link-button"
+                            data-admin-action="orders">
+
+                            عرض الكل ←
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        رقم الطلب
+                                    </th>
+
+                                    <th>
+                                        العميل
+                                    </th>
+
+                                    <th>
+                                        المشروع
+                                    </th>
+
+                                    <th>
+                                        الحالة
+                                    </th>
+
+                                    <th>
+                                        التاريخ
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="recentOrders">
+
+                                <tr>
+
+                                    <td colspan="5"
+                                        class="empty-table">
+
+                                        لا توجد طلبات حتى الآن
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 المستخدمون
+            =============================== -->
+
+            <section
+                id="admin-users"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            الحسابات
+                        </span>
+
+                        <h2>
+                            المستخدمون
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        الاسم
+                                    </th>
+
+                                    <th>
+                                        البريد
+                                    </th>
+
+                                    <th>
+                                        الحالة
+                                    </th>
+
+                                    <th>
+                                        تاريخ التسجيل
+                                    </th>
+
+                                    <th>
+                                        الإجراءات
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="usersTable">
+
+                                <tr>
+
+                                    <td colspan="5"
+                                        class="empty-table">
+
+                                        لا توجد بيانات
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 الطلبات
+            =============================== -->
+
+            <section
+                id="admin-orders"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            المشاريع
+                        </span>
+
+                        <h2>
+                            الطلبات
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary">
+
+                        + طلب جديد
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        العميل
+                                    </th>
+
+                                    <th>
+                                        نوع المشروع
+                                    </th>
+
+                                    <th>
+                                        الباقة
+                                    </th>
+
+                                    <th>
+                                        الحالة
+                                    </th>
+
+                                    <th>
+                                        الإجراءات
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="ordersTable">
+
+                                <tr>
+
+                                    <td colspan="6"
+                                        class="empty-table">
+
+                                        لا توجد طلبات
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 الدعم
+            =============================== -->
+
+            <section
+                id="admin-support"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            العملاء
+                        </span>
+
+                        <h2>
+                            الدعم والتذاكر
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        رقم التذكرة
+                                    </th>
+
+                                    <th>
+                                        العميل
+                                    </th>
+
+                                    <th>
+                                        الموضوع
+                                    </th>
+
+                                    <th>
+                                        الحالة
+                                    </th>
+
+                                    <th>
+                                        التاريخ
+                                    </th>
+
+                                    <th>
+                                        فتح
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="supportTable">
+
+                                <tr>
+
+                                    <td colspan="6"
+                                        class="empty-table">
+
+                                        لا توجد تذاكر دعم
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 التقييمات
+            =============================== -->
+
+            <section
+                id="admin-reviews"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            آراء العملاء
+                        </span>
+
+                        <h2>
+                            التقييمات
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="reviewsContainer"
+                    class="admin-reviews-grid">
+
+                    <div class="admin-empty-state">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <h3>
+                            لا توجد تقييمات
+                        </h3>
+
+                        <p>
+                            ستظهر تقييمات العملاء هنا.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 الباقات
+            =============================== -->
+
+            <section
+                id="admin-packages"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            المتجر
+                        </span>
+
+                        <h2>
+                            الباقات والأسعار
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary">
+
+                        + إضافة باقة
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="packagesContainer"
+                    class="admin-packages-grid">
+
+                    <div class="admin-package-card">
+
+                        <span>
+                            البداية
+                        </span>
+
+                        <strong>
+                            $5
+                        </strong>
+
+                        <p>
+                            الباقة الأساسية للمشاريع
+                            الصغيرة.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="admin-link-button">
+
+                            تعديل
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-package-card">
+
+                        <span>
+                            المتقدمة
+                        </span>
+
+                        <strong>
+                            $35
+                        </strong>
+
+                        <p>
+                            للمواقع والمشاريع المتقدمة.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="admin-link-button">
+
+                            تعديل
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-package-card">
+
+                        <span>
+                            الاحترافية
+                        </span>
+
+                        <strong>
+                            $75
+                        </strong>
+
+                        <p>
+                            للمشاريع الكبيرة والمخصصة.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="admin-link-button">
+
+                            تعديل
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 الإشعارات
+            =============================== -->
+
+            <section
+                id="admin-notifications"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            النظام
+                        </span>
+
+                        <h2>
+                            الإشعارات
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div
+                        id="adminNotificationsList"
+                        class="admin-notifications-list">
+
+                        <div class="admin-empty-state">
+
+                            <span>
+                                🔔
+                            </span>
+
+                            <h3>
+                                لا توجد إشعارات
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 سجل النشاط
+            =============================== -->
+
+            <section
+                id="admin-activity"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            الأمان
+                        </span>
+
+                        <h2>
+                            سجل نشاط الإدارة
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        المستخدم
+                                    </th>
+
+                                    <th>
+                                        العملية
+                                    </th>
+
+                                    <th>
+                                        التفاصيل
+                                    </th>
+
+                                    <th>
+                                        التاريخ
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="activityTable">
+
+                                <tr>
+
+                                    <td colspan="4"
+                                        class="empty-table">
+
+                                        لا يوجد نشاط مسجل
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==============================
+                 الإعدادات
+            =============================== -->
+
+            <section
+                id="admin-settings"
+                class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span>
+                            النظام
+                        </span>
+
+                        <h2>
+                            إعدادات الموقع
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-settings-grid">
+
+
+                    <div class="admin-panel">
+
+                        <h3>
+                            معلومات الشركة
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label>
+                                اسم الشركة
+                            </label>
+
+                            <input
+                                type="text"
+                                value="أبو العز"
+                                id="companyName">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                رابط فيسبوك
+                            </label>
+
+                            <input
+                                type="url"
+                                value="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
+                                id="facebookUrl">
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-primary">
+
+                            حفظ الإعدادات
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-panel">
+
+                        <h3>
+                            حالة النظام
+                        </h3>
+
+                        <div class="system-status">
+
+                            <div>
+
+                                <span>
+                                    الموقع
+                                </span>
+
+                                <strong class="status-online">
+                                    ● يعمل
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    قاعدة البيانات
+                                </span>
+
+                                <strong>
+                                    سيتم الربط لاحقاً
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    المصادقة
+                                </span>
+
+                                <strong>
+                                    سيتم ربط Supabase
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- رسالة النظام -->
+
+    <div
+        id="adminToast"
+        class="admin-toast"
+        aria-live="polite">
+    </div>
+
+
+    <!-- JavaScript الخاص باللوحة -->
+
+    <script>
+
+        "use strict";
+
+
+        /*
+         * هذا الملف حالياً هو الواجهة الأولية
+         * للوحة الإدارة.
+         *
+         * لاحقاً سيتم ربطه بـ:
+         *
+         * Supabase Auth
+         * Supabase Database
+         * صلاحيات المدير
+         * المستخدمين
+         * الطلبات
+         * الدعم
+         * الإشعارات
+         * سجل النشاط
+         */
+
+
+        const AdminApp = {
+
+            state: {
+
+                currentSection: "dashboard",
+
+                initialized: false
+
+            },
+
+
+            init() {
+
+                this.setupNavigation();
+
+                this.setupQuickActions();
+
+                this.setupLogout();
+
+                this.setupHashNavigation();
+
+                this.loadInitialData();
+
+                this.state.initialized = true;
+
+            },
+
+
+            setupNavigation() {
+
+                const links =
+                    document.querySelectorAll(
+                        ".admin-nav-link"
+                    );
+
+
+                links.forEach(link => {
+
+                    link.addEventListener(
+                        "click",
+                        event => {
+
+                            event.preventDefault();
+
+                            const target =
+                                link.getAttribute(
+                                    "href"
+                                ).replace("#", "");
+
+                            this.showSection(target);
+
+                        }
+                    );
+
+                });
+
+            },
+
+
+            setupQuickActions() {
+
+                const buttons =
+                    document.querySelectorAll(
+                        "[data-admin-action]"
+                    );
+
+
+                buttons.forEach(button => {
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            const target =
+                                button.dataset.adminAction;
+
+                            this.showSection(target);
+
+                        }
+                    );
+
+                });
+
+            },
+
+
+            setupLogout() {
+
+                const button =
+                    document.getElementById(
+                        "adminLogoutButton"
+                    );
+
+
+                if (!button) {
+
+                    return;
+
+                }
+
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        this.logout();
+
+                    }
+                );
+
+            },
+
+
+            setupHashNavigation() {
+
+                window.addEventListener(
+                    "hashchange",
+                    () => {
+
+                        const hash =
+                            window.location.hash
+                            .replace("#", "");
+
+                        if (hash) {
+
+                            this.showSection(hash);
+
+                        }
+
+                    }
+                );
+
+            },
+
+
+            showSection(section) {
+
+                const sections =
+                    document.querySelectorAll(
+                        ".admin-section"
+                    );
+
+
+                sections.forEach(item => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                const target =
+                    document.getElementById(
+                        "admin-" + section
+                    );
+
+
+                if (!target) {
+
+                    return;
+
+                }
+
+
+                target.classList.add("active");
+
+
+                const links =
+                    document.querySelectorAll(
+                        ".admin-nav-link"
+                    );
+
+
+                links.forEach(link => {
+
+                    link.classList.remove(
+                        "active"
+                    );
+
+
+                    if (
+                        link.getAttribute(
+                            "href"
+                        ) === "#" + section
+                    ) {
+
+                        link.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                });
+
+
+                const title =
+                    document.getElementById(
+                        "adminPageTitle"
+                    );
+
+
+                if (title) {
+
+                    const activeLink =
+                        document.querySelector(
+                            '.admin-nav-link.active span'
+                        );
+
+
+                    if (activeLink) {
+
+                        title.textContent =
+                            activeLink.textContent.trim();
+
+                    }
+
+                }
+
+
+                this.state.currentSection =
+                    section;
+
+
+                window.location.hash =
+                    section;
+
+            },
+
+
+            loadInitialData() {
+
+                /*
+                 * مؤقتاً نعرض اللوحة.
+                 *
+                 * في المرحلة القادمة لن نعتمد
+                 * على بيانات وهمية.
+                 *
+                 * سيتم جلب البيانات من Supabase.
+                 */
+
+                const loading =
+                    document.getElementById(
+                        "adminLoading"
+                    );
+
+                const app =
+                    document.getElementById(
+                        "adminApp"
+                    );
+
+
+                setTimeout(() => {
+
+                    if (loading) {
+
+                        loading.style.display =
+                            "none";
+
+                    }
+
+
+                    if (app) {
+
+                        app.hidden = false;
+
+                    }
+
+                }, 700);
+
+            },
+
+
+            logout() {
+
+                localStorage.removeItem(
+                    "abo_al_ezz_admin_session"
+                );
+
+
+                window.location.href =
+                    "index.html";
+
+            }
+
+        };
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+                AdminApp.init();
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
