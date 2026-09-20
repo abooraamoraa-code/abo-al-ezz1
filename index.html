@@ -1,295 +1,318 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="أبو العز - شركة رقمية متخصصة في تصميم المواقع والحلول الرقمية والذكاء الاصطناعي.">
+
+    <meta name="keywords"
+          content="أبو العز, تصميم مواقع, برمجة, ذكاء اصطناعي, مواقع إلكترونية, خدمات رقمية">
+
+    <meta name="author"
+          content="أبو العز">
+
+    <meta name="theme-color"
+          content="#0b1020">
 
     <title>أبو العز | شركة الحلول الرقمية</title>
 
-    <meta name="description" content="أبو العز - حلول رقمية وتصميم مواقع وخدمات تقنية.">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Tahoma, sans-serif;
-            background: #0b0d12;
-            color: #ffffff;
-            min-height: 100vh;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .navbar {
-            width: 100%;
-            padding: 20px 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #20232c;
-            background: rgba(11, 13, 18, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #10a37f;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #b8bcc7;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #10a37f;
-        }
-
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 70px 20px;
-            background:
-                radial-gradient(circle at top, #18352f 0%, #0b0d12 45%);
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 9px 18px;
-            border: 1px solid #245d4f;
-            border-radius: 30px;
-            color: #6ee7c5;
-            margin-bottom: 25px;
-            background: rgba(16, 163, 127, 0.08);
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 7vw, 82px);
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: #10a37f;
-        }
-
-        .hero p {
-            color: #b8bcc7;
-            font-size: 20px;
-            line-height: 1.9;
-            margin-bottom: 35px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 28px;
-            border-radius: 12px;
-            font-weight: bold;
-            border: 1px solid #30343e;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #10a37f;
-            color: white;
-            border-color: #10a37f;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: #0d8f70;
-        }
-
-        .btn-secondary {
-            background: #171a21;
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            border-color: #10a37f;
-        }
-
-        .section {
-            padding: 90px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: #999faa;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: #12151b;
-            border: 1px solid #252a34;
-            border-radius: 18px;
-            padding: 30px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-7px);
-            border-color: #10a37f;
-        }
-
-        .card-icon {
-            font-size: 38px;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 23px;
-        }
-
-        .card p {
-            color: #9da2ae;
-            line-height: 1.8;
-        }
-
-        .cta {
-            margin: 30px 7% 90px;
-            padding: 60px 30px;
-            text-align: center;
-            border-radius: 25px;
-            background: linear-gradient(135deg, #102c25, #11151d);
-            border: 1px solid #245d4f;
-        }
-
-        .cta h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            color: #aeb3be;
-            margin-bottom: 30px;
-        }
-
-        footer {
-            border-top: 1px solid #20232c;
-            padding: 35px 7%;
-            text-align: center;
-            color: #858b98;
-        }
-
-        @media (max-width: 800px) {
-            .nav-links {
-                display: none;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                min-height: 70vh;
-            }
-        }
-    </style>
+    <!-- ملف التصميم الرئيسي -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- =====================================================
+         شريط التنقل الرئيسي
+    ====================================================== -->
+
     <header class="navbar">
 
-        <a href="index.html" class="logo">
-            أبو <span>العز</span>
-        </a>
+        <div class="container navbar-inner">
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#about">عن الشركة</a></li>
-                <li><a href="#contact">تواصل</a></li>
-            </ul>
-        </nav>
+            <a href="index.html"
+               class="logo"
+               aria-label="العودة إلى الصفحة الرئيسية">
+
+                <span class="logo-icon">A</span>
+
+                <span class="logo-text">
+                    أبو العز
+                </span>
+
+            </a>
+
+
+            <nav class="main-nav"
+                 aria-label="القائمة الرئيسية">
+
+                <a href="#home">
+                    الرئيسية
+                </a>
+
+                <a href="#services">
+                    خدماتنا
+                </a>
+
+                <a href="#about">
+                    من نحن
+                </a>
+
+                <a href="#pricing">
+                    الأسعار
+                </a>
+
+                <a href="#orders">
+                    اطلب الآن
+                </a>
+
+                <a href="#support">
+                    الدعم
+                </a>
+
+                <a href="#contact">
+                    تواصل معنا
+                </a>
+
+            </nav>
+
+
+            <div class="navbar-actions">
+
+                <a href="#login"
+                   class="btn btn-small btn-outline">
+
+                    تسجيل الدخول
+
+                </a>
+
+                <a href="#orders"
+                   class="btn btn-small btn-primary">
+
+                    ابدأ مشروعك
+
+                </a>
+
+            </div>
+
+        </div>
 
     </header>
 
 
-    <main>
+    <!-- =====================================================
+         المحتوى الرئيسي
+    ====================================================== -->
 
-        <section class="hero">
+    <main id="main-content">
 
-            <div class="hero-content">
 
-                <div class="badge">
-                    🚀 شركة رقمية حديثة
+        <!-- =================================================
+             الصفحة الرئيسية / Hero
+        ================================================== -->
+
+        <section id="home"
+                 class="hero">
+
+            <div class="container hero-grid">
+
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+
+                        🚀 شركة رقمية حديثة
+
+                    </div>
+
+
+                    <h1>
+
+                        نحول أفكارك إلى
+
+                        <span class="gradient-text">
+                            مشاريع رقمية
+                        </span>
+
+                        حقيقية
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        نساعدك على إنشاء مواقع إلكترونية،
+                        حلول رقمية، أنظمة ذكية، وخدمات
+                        تعتمد على أحدث تقنيات البرمجة
+                        والذكاء الاصطناعي.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a href="#services"
+                           class="btn btn-primary">
+
+                            اكتشف خدماتنا
+
+                        </a>
+
+
+                        <a href="#orders"
+                           class="btn btn-secondary">
+
+                            اطلب موقعك الآن
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-contact">
+
+                        <span>
+                            تحتاج مساعدة مباشرة؟
+                        </span>
+
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            تواصل مع أبو العز على فيسبوك
+
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <h1>
-                    نبني أفكارك<br>
-                    <span>بشكل رقمي</span>
-                </h1>
 
-                <p>
-                    حلول رقمية، مواقع، أنظمة وخدمات تقنية
-                    تساعد أصحاب المشاريع والشركات على بناء حضورهم
-                    الرقمي بطريقة حديثة.
-                </p>
+                <!-- بطاقة الجانب -->
 
-                <div class="buttons">
+                <div class="hero-card">
 
-                    <a href="#services" class="btn btn-primary">
-                        اكتشف خدماتنا
-                    </a>
+                    <div class="hero-card-glow"></div>
 
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
-                        target="_blank"
-                        class="btn btn-secondary"
-                    >
-                        💬 تواصل مع أبو العز
-                    </a>
+                    <div class="hero-card-content">
+
+                        <div class="code-window">
+
+                            <div class="code-window-top">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <div class="code-content">
+
+                                <p>
+                                    <span class="code-blue">
+                                        const
+                                    </span>
+
+                                    project =
+                                </p>
+
+                                <p class="code-indent">
+
+                                    {
+
+                                </p>
+
+                                <p class="code-indent">
+
+                                    name:
+
+                                    <span class="code-green">
+                                        "مشروعك"
+                                    </span>
+
+                                </p>
+
+                                <p class="code-indent">
+
+                                    future:
+
+                                    <span class="code-purple">
+                                        true
+                                    </span>
+
+                                </p>
+
+                                <p class="code-indent">
+
+                                    success:
+
+                                    <span class="code-green">
+                                        "∞"
+                                    </span>
+
+                                </p>
+
+                                <p>
+
+                                    };
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-card-info">
+
+                            <div>
+
+                                <strong>
+                                    100+
+                                </strong>
+
+                                <span>
+                                    فكرة وميزة
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    AI
+                                </strong>
+
+                                <span>
+                                    حلول ذكية
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    24/7
+                                </strong>
+
+                                <span>
+                                    دعم مستمر
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -298,58 +321,377 @@
         </section>
 
 
-        <section class="section" id="services">
+        <!-- =================================================
+             شريط المميزات
+        ================================================== -->
 
-            <div class="section-title">
+        <section class="features-strip">
 
-                <h2>خدماتنا</h2>
+            <div class="container features-grid">
 
-                <p>
-                    مجموعة من الخدمات الرقمية التي سنوسعها لاحقًا
-                </p>
+
+                <div class="feature-item">
+
+                    <span class="feature-icon">
+                        ⚡
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            سرعة التنفيذ
+                        </strong>
+
+                        <small>
+                            نعمل على تحويل الفكرة إلى مشروع
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <span class="feature-icon">
+                        🔒
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            حماية وأمان
+                        </strong>
+
+                        <small>
+                            نهتم بحماية بيانات المشروع
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <span class="feature-icon">
+                        🤖
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            ذكاء اصطناعي
+                        </strong>
+
+                        <small>
+                            حلول حديثة تعتمد على AI
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-item">
+
+                    <span class="feature-icon">
+                        📱
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            جميع الأجهزة
+                        </strong>
+
+                        <small>
+                            تصميم متوافق مع الهاتف والكمبيوتر
+                        </small>
+
+                    </div>
+
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="cards">
 
-                <div class="card">
+        <!-- =================================================
+             الخدمات
+        ================================================== -->
 
-                    <div class="card-icon">💻</div>
+        <section id="services"
+                 class="section services-section">
 
-                    <h3>تصميم المواقع</h3>
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        خدماتنا
+                    </span>
+
+                    <h2>
+                        كل ما تحتاجه لبناء مشروعك
+                    </h2>
 
                     <p>
-                        تصميم مواقع حديثة ومتجاوبة تناسب الشركات
-                        والمشاريع والأعمال المختلفة.
+                        مجموعة من الخدمات الرقمية التي
+                        تساعدك على إطلاق فكرتك وتطويرها.
                     </p>
 
                 </div>
 
 
-                <div class="card">
+                <div class="services-grid">
 
-                    <div class="card-icon">🤖</div>
 
-                    <h3>حلول الذكاء الاصطناعي</h3>
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🌐
+                        </div>
+
+                        <h3>
+                            تصميم المواقع
+                        </h3>
+
+                        <p>
+                            تصميم مواقع حديثة ومتجاوبة
+                            للشركات والمتاجر والمشاريع
+                            والأعمال الشخصية.
+                        </p>
+
+                        <a href="#orders">
+                            اطلب الخدمة ←
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🤖
+                        </div>
+
+                        <h3>
+                            حلول الذكاء الاصطناعي
+                        </h3>
+
+                        <p>
+                            إضافة أدوات وتقنيات الذكاء
+                            الاصطناعي إلى المواقع والمشاريع.
+                        </p>
+
+                        <a href="#orders">
+                            اطلب الخدمة ←
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            البرمجة والأنظمة
+                        </h3>
+
+                        <p>
+                            تطوير أنظمة وتطبيقات وأدوات
+                            رقمية حسب احتياجات المشروع.
+                        </p>
+
+                        <a href="#orders">
+                            اطلب الخدمة ←
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            التصميم والإبداع
+                        </h3>
+
+                        <p>
+                            تصميم واجهات وصفحات إعلانية
+                            ومحتوى بصري للمشاريع.
+                        </p>
+
+                        <a href="#orders">
+                            اطلب الخدمة ←
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🛒
+                        </div>
+
+                        <h3>
+                            المتاجر الإلكترونية
+                        </h3>
+
+                        <p>
+                            إنشاء واجهات للمتاجر وصفحات
+                            المنتجات والطلبات.
+                        </p>
+
+                        <a href="#orders">
+                            اطلب الخدمة ←
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🧩
+                        </div>
+
+                        <h3>
+                            حلول مخصصة
+                        </h3>
+
+                        <p>
+                            لديك فكرة مختلفة؟ يمكننا بناء
+                            حل رقمي مخصص لفكرتك.
+                        </p>
+
+                        <a href="#orders">
+                            تحدث معنا ←
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             من نحن
+        ================================================== -->
+
+        <section id="about"
+                 class="section about-section">
+
+            <div class="container about-grid">
+
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        من نحن
+                    </span>
+
+                    <h2>
+                        أبو العز للحلول الرقمية
+                    </h2>
 
                     <p>
-                        تطوير أفكار وأدوات رقمية تعتمد على تقنيات
-                        الذكاء الاصطناعي.
+                        مشروع رقمي يهدف إلى تقديم خدمات
+                        تقنية وتصميمية وبرمجية تساعد أصحاب
+                        الأفكار والمشاريع على بناء حضورهم
+                        على الإنترنت.
                     </p>
+
+                    <p>
+                        نعمل على الجمع بين التصميم الحديث
+                        والبرمجة والأدوات الذكية لإنشاء
+                        تجارب رقمية سهلة وسريعة.
+                    </p>
+
+
+                    <div class="about-points">
+
+                        <div>
+                            ✓ تصميم حديث
+                        </div>
+
+                        <div>
+                            ✓ حلول قابلة للتطوير
+                        </div>
+
+                        <div>
+                            ✓ دعم للمشاريع الجديدة
+                        </div>
+
+                        <div>
+                            ✓ تقنيات حديثة
+                        </div>
+
+                    </div>
 
                 </div>
 
 
-                <div class="card">
+                <div class="about-panel">
 
-                    <div class="card-icon">⚙️</div>
+                    <div class="about-panel-number">
+                        01
+                    </div>
 
-                    <h3>الأنظمة الرقمية</h3>
+                    <h3>
+                        فكرتك أولاً
+                    </h3>
 
                     <p>
-                        بناء أنظمة ولوحات تحكم وإدارة للمشاريع
-                        والخدمات الرقمية.
+                        نبدأ بفهم احتياجك ثم نحوله إلى
+                        خطة رقمية واضحة.
+                    </p>
+
+
+                    <div class="about-panel-line"></div>
+
+
+                    <div class="about-panel-number">
+                        02
+                    </div>
+
+                    <h3>
+                        نبني المشروع
+                    </h3>
+
+                    <p>
+                        يتم تطوير المشروع بطريقة منظمة
+                        وقابلة للتوسع.
+                    </p>
+
+
+                    <div class="about-panel-line"></div>
+
+
+                    <div class="about-panel-number">
+                        03
+                    </div>
+
+                    <h3>
+                        نطوره باستمرار
+                    </h3>
+
+                    <p>
+                        يمكن إضافة ميزات جديدة للمشروع
+                        مع مرور الوقت.
                     </p>
 
                 </div>
@@ -359,48 +701,944 @@
         </section>
 
 
-        <section class="section" id="about">
+        <!-- =================================================
+             الأسعار
+        ================================================== -->
 
-            <div class="section-title">
+        <section id="pricing"
+                 class="section pricing-section">
 
-                <h2>عن أبو العز</h2>
+            <div class="container">
 
-                <p>
-                    نعمل على بناء منصة رقمية متكاملة تجمع الخدمات
-                    والطلبات والدعم الفني في مكان واحد.
-                </p>
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        الأسعار
+                    </span>
+
+                    <h2>
+                        باقات تناسب مختلف المشاريع
+                    </h2>
+
+                    <p>
+                        الأسعار التالية أمثلة أولية ويمكن
+                        تعديلها حسب تفاصيل المشروع.
+                    </p>
+
+                </div>
+
+
+                <div class="pricing-grid">
+
+
+                    <article class="price-card">
+
+                        <span class="price-name">
+                            البداية
+                        </span>
+
+                        <div class="price">
+                            <strong>
+                                $5
+                            </strong>
+
+                            <span>
+                                / يبدأ من
+                            </span>
+                        </div>
+
+                        <p>
+                            للمشاريع البسيطة
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                ✓ صفحة بسيطة
+                            </li>
+
+                            <li>
+                                ✓ تصميم متجاوب
+                            </li>
+
+                            <li>
+                                ✓ أزرار وروابط
+                            </li>
+
+                            <li>
+                                ✓ تسليم المشروع
+                            </li>
+
+                        </ul>
+
+                        <a href="#orders"
+                           class="btn btn-outline btn-full">
+
+                            اختر الباقة
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="price-card featured">
+
+                        <div class="popular-badge">
+                            الأكثر طلباً
+                        </div>
+
+                        <span class="price-name">
+                            المتقدمة
+                        </span>
+
+                        <div class="price">
+
+                            <strong>
+                                $35
+                            </strong>
+
+                            <span>
+                                / يبدأ من
+                            </span>
+
+                        </div>
+
+                        <p>
+                            للمواقع والمشاريع المتطورة
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                ✓ عدة أقسام
+                            </li>
+
+                            <li>
+                                ✓ تصميم احترافي
+                            </li>
+
+                            <li>
+                                ✓ JavaScript
+                            </li>
+
+                            <li>
+                                ✓ نماذج تواصل
+                            </li>
+
+                            <li>
+                                ✓ تحسين الهاتف
+                            </li>
+
+                        </ul>
+
+                        <a href="#orders"
+                           class="btn btn-primary btn-full">
+
+                            اختر الباقة
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="price-card">
+
+                        <span class="price-name">
+                            الاحترافية
+                        </span>
+
+                        <div class="price">
+
+                            <strong>
+                                $75
+                            </strong>
+
+                            <span>
+                                / يبدأ من
+                            </span>
+
+                        </div>
+
+                        <p>
+                            للمشاريع الكبيرة
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                ✓ مشروع مخصص
+                            </li>
+
+                            <li>
+                                ✓ نظام مستخدمين
+                            </li>
+
+                            <li>
+                                ✓ قاعدة بيانات
+                            </li>
+
+                            <li>
+                                ✓ لوحة تحكم
+                            </li>
+
+                            <li>
+                                ✓ ميزات متقدمة
+                            </li>
+
+                        </ul>
+
+                        <a href="#orders"
+                           class="btn btn-outline btn-full">
+
+                            اطلب عرضاً
+
+                        </a>
+
+                    </article>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <section class="cta" id="contact">
+        <!-- =================================================
+             الطلبات
+        ================================================== -->
 
-            <h2>هل لديك فكرة؟</h2>
+        <section id="orders"
+                 class="section order-section">
 
-            <p>
-                أرسل تفاصيل مشروعك وسنقوم ببناء النظام المناسب له.
-            </p>
+            <div class="container">
 
-            <a
-                href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
-                target="_blank"
-                class="btn btn-primary"
-            >
-                تواصل مباشرة مع أبو العز
-            </a>
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        اطلب مشروعك
+                    </span>
+
+                    <h2>
+                        أخبرنا ماذا تريد أن نبني لك
+                    </h2>
+
+                    <p>
+                        سيتم تطوير نموذج الطلب لاحقاً ليتم
+                        ربطه بقاعدة البيانات ولوحة الإدارة.
+                    </p>
+
+                </div>
+
+
+                <div class="order-box">
+
+                    <form id="orderForm"
+                          class="order-form">
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="orderName">
+                                    الاسم
+                                </label>
+
+                                <input
+                                    id="orderName"
+                                    name="name"
+                                    type="text"
+                                    placeholder="اكتب اسمك"
+                                    autocomplete="name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="orderEmail">
+                                    البريد الإلكتروني
+                                </label>
+
+                                <input
+                                    id="orderEmail"
+                                    name="email"
+                                    type="email"
+                                    placeholder="example@email.com"
+                                    autocomplete="email">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="projectType">
+                                    نوع المشروع
+                                </label>
+
+                                <select
+                                    id="projectType"
+                                    name="project_type"
+                                    required>
+
+                                    <option value="">
+                                        اختر نوع المشروع
+                                    </option>
+
+                                    <option value="website">
+                                        موقع إلكتروني
+                                    </option>
+
+                                    <option value="store">
+                                        متجر إلكتروني
+                                    </option>
+
+                                    <option value="ai">
+                                        مشروع ذكاء اصطناعي
+                                    </option>
+
+                                    <option value="system">
+                                        نظام أو لوحة تحكم
+                                    </option>
+
+                                    <option value="design">
+                                        تصميم
+                                    </option>
+
+                                    <option value="other">
+                                        شيء آخر
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="orderPackage">
+                                    الباقة
+                                </label>
+
+                                <select
+                                    id="orderPackage"
+                                    name="package">
+
+                                    <option value="">
+                                        اختر الباقة
+                                    </option>
+
+                                    <option value="starter">
+                                        البداية - $5
+                                    </option>
+
+                                    <option value="advanced">
+                                        المتقدمة - $35
+                                    </option>
+
+                                    <option value="professional">
+                                        الاحترافية - $75
+                                    </option>
+
+                                    <option value="custom">
+                                        مشروع مخصص
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="projectDetails">
+                                تفاصيل المشروع
+                            </label>
+
+                            <textarea
+                                id="projectDetails"
+                                name="details"
+                                rows="7"
+                                placeholder="اكتب بالتفصيل ماذا تريد في مشروعك..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="contactMethod">
+                                    طريقة التواصل
+                                </label>
+
+                                <select
+                                    id="contactMethod"
+                                    name="contact_method">
+
+                                    <option value="facebook">
+                                        فيسبوك
+                                    </option>
+
+                                    <option value="email">
+                                        البريد الإلكتروني
+                                    </option>
+
+                                    <option value="later">
+                                        سيتم تحديدها لاحقاً
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contactValue">
+                                    وسيلة التواصل
+                                </label>
+
+                                <input
+                                    id="contactValue"
+                                    name="contact_value"
+                                    type="text"
+                                    placeholder="رابط أو بيانات التواصل">
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-large">
+
+                            إرسال طلب المشروع 🚀
+
+                        </button>
+
+                        <p id="orderMessage"
+                           class="form-message"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             تسجيل الدخول
+        ================================================== -->
+
+        <section id="login"
+                 class="section login-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        حسابك
+                    </span>
+
+                    <h2>
+                        تسجيل الدخول
+                    </h2>
+
+                    <p>
+                        نظام تسجيل الدخول سيتم ربطه لاحقاً
+                        بـ Supabase Auth.
+                    </p>
+
+                </div>
+
+
+                <div class="login-box">
+
+                    <form id="loginForm">
+
+
+                        <div class="form-group">
+
+                            <label for="loginEmail">
+                                البريد الإلكتروني
+                            </label>
+
+                            <input
+                                id="loginEmail"
+                                type="email"
+                                name="email"
+                                placeholder="البريد الإلكتروني"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="loginPassword">
+                                كلمة المرور
+                            </label>
+
+                            <input
+                                id="loginPassword"
+                                type="password"
+                                name="password"
+                                placeholder="كلمة المرور"
+                                autocomplete="current-password"
+                                required>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-full">
+
+                            تسجيل الدخول
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="googleLoginButton"
+                            class="btn btn-google btn-full">
+
+                            🌐 المتابعة باستخدام Google
+
+                        </button>
+
+
+                        <p class="login-note">
+
+                            ليس لديك حساب؟
+
+                            <a href="#register">
+                                إنشاء حساب جديد
+                            </a>
+
+                        </p>
+
+                        <p id="loginMessage"
+                           class="form-message"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             التسجيل
+        ================================================== -->
+
+        <section id="register"
+                 class="section register-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        إنشاء حساب
+                    </span>
+
+                    <h2>
+                        أنشئ حسابك
+                    </h2>
+
+                    <p>
+                        لاحقاً سيتم ربط التسجيل الحقيقي
+                        بقاعدة بيانات آمنة.
+                    </p>
+
+                </div>
+
+
+                <div class="register-box">
+
+                    <form id="registerForm">
+
+
+                        <div class="form-group">
+
+                            <label for="registerName">
+                                الاسم
+                            </label>
+
+                            <input
+                                id="registerName"
+                                type="text"
+                                name="name"
+                                placeholder="اسمك"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="registerEmail">
+                                البريد الإلكتروني
+                            </label>
+
+                            <input
+                                id="registerEmail"
+                                type="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="registerPassword">
+                                كلمة المرور
+                            </label>
+
+                            <input
+                                id="registerPassword"
+                                type="password"
+                                name="password"
+                                placeholder="كلمة مرور قوية"
+                                minlength="8"
+                                required>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-full">
+
+                            إنشاء الحساب
+
+                        </button>
+
+
+                        <p id="registerMessage"
+                           class="form-message"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             الدعم
+        ================================================== -->
+
+        <section id="support"
+                 class="section support-section">
+
+            <div class="container support-grid">
+
+
+                <div class="support-content">
+
+                    <span class="section-label">
+                        الدعم
+                    </span>
+
+                    <h2>
+                        هل تحتاج إلى مساعدة؟
+                    </h2>
+
+                    <p>
+                        يمكنك إرسال مشكلة أو سؤال وسيتم
+                        تجهيز نظام دعم متكامل مرتبط بلوحة
+                        الإدارة.
+                    </p>
+
+
+                    <div class="support-features">
+
+                        <div>
+                            🎫 تذاكر دعم
+                        </div>
+
+                        <div>
+                            💬 رسائل ومتابعة
+                        </div>
+
+                        <div>
+                            🔔 إشعارات
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="support-box">
+
+                    <form id="supportForm">
+
+
+                        <div class="form-group">
+
+                            <label for="supportName">
+                                الاسم
+                            </label>
+
+                            <input
+                                id="supportName"
+                                type="text"
+                                name="name"
+                                placeholder="اسمك"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="supportSubject">
+                                عنوان المشكلة
+                            </label>
+
+                            <input
+                                id="supportSubject"
+                                type="text"
+                                name="subject"
+                                placeholder="مثلاً: مشكلة في الطلب"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="supportDetails">
+                                الرسالة
+                            </label>
+
+                            <textarea
+                                id="supportDetails"
+                                name="details"
+                                rows="6"
+                                placeholder="اكتب رسالتك..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-full">
+
+                            إرسال إلى الدعم
+
+                        </button>
+
+
+                        <p id="supportMessage"
+                           class="form-message"
+                           aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             التواصل
+        ================================================== -->
+
+        <section id="contact"
+                 class="section contact-section">
+
+            <div class="container contact-box">
+
+
+                <div>
+
+                    <span class="section-label">
+                        تواصل معنا
+                    </span>
+
+                    <h2>
+                        جاهز تبدأ مشروعك؟
+                    </h2>
+
+                    <p>
+                        تواصل معنا مباشرة وأخبرنا بفكرتك.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary btn-large">
+
+                    تواصل مع أبو العز على فيسبوك
+
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
 
-    <footer>
+    <!-- =====================================================
+         التذييل
+    ====================================================== -->
 
-        © 2026 أبو العز — جميع الحقوق محفوظة
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    أبو العز
+                </div>
+
+                <p>
+                    حلول رقمية، مواقع، برمجة وذكاء
+                    اصطناعي لبناء مشاريع المستقبل.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    روابط
+                </h3>
+
+                <a href="#home">
+                    الرئيسية
+                </a>
+
+                <a href="#services">
+                    الخدمات
+                </a>
+
+                <a href="#pricing">
+                    الأسعار
+                </a>
+
+                <a href="#orders">
+                    الطلبات
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    المساعدة
+                </h3>
+
+                <a href="#support">
+                    الدعم
+                </a>
+
+                <a href="#login">
+                    تسجيل الدخول
+                </a>
+
+                <a href="#register">
+                    إنشاء حساب
+                </a>
+
+                <a href="#contact">
+                    تواصل معنا
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    التواصل
+                </h3>
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61591794734274&locale=ar_AR"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    فيسبوك
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+
+                    © <span data-current-year>2026</span>
+
+                    أبو العز للحلول الرقمية.
+
+                    جميع الحقوق محفوظة.
+
+                </p>
+
+            </div>
+
+        </div>
 
     </footer>
- <script src="app.js"></script>
+
+
+    <!-- =====================================================
+         ملفات JavaScript
+    ====================================================== -->
+
+    <script src="app.js"></script>
+
 </body>
+
 </html>
